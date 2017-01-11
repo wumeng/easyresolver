@@ -1,6 +1,6 @@
 # easyresolver
 
-**easyresolver** is an dns resolver for ngx_lua based on resty.dns.resolver and resty.lrucache.you can easily resolve domain and get the ip list.ip list default cached 600 secends by LRUCache. easyresolver only supports unix like system,eg: Linux，mac OS.
+**easyresolver** is a dns resolver for ngx_lua based on resty.dns.resolver and resty.lrucache.you can easily resolve domain and get the ip list.ip list default cached 600 secends by LRUCache. easyresolver only supports unix like system,eg: Linux，mac OS.
 
 1.git clone code easyresolver.lua from https://github.com/wumeng/easyresolver.git.
 
