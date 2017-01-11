@@ -35,7 +35,6 @@ local _M = { _VERSION = '0.01' }
 	local function matchDns()
 		local nameserver = {}
 		local dns_str = readOsDnsConfig()
-	    -- 参数 "o" 是开启缓存必须的
 	    local captures, it, err
 		it, err = ngx_gmatch(dns_str, [[^nameserver\s+(\d+?\.\d+?\.\d+?\.\d+$)]], "jomi")
 
