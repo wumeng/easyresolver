@@ -15,6 +15,7 @@ local ip_list_cache_key = "ip_list_key"
 local cache_time = 600
 
 
+
 local _M = { _VERSION = '0.01' }
 
 	-- read os dns config
