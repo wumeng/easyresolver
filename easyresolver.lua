@@ -52,7 +52,7 @@ local _M = { _VERSION = '0.01' }
 
 		local list = ip_cache:get(ip_list_cache_key)
 		if list ~= nil and list ~= "" then
-	        ngx.log(ngx.ALERT,"##resolverdomain module##,get ip_list from cache")
+	        ngx.log(ngx.ALERT,"##easyresolver module##,get ip_list from cache")
 			return list
 		end	
 
@@ -66,18 +66,18 @@ local _M = { _VERSION = '0.01' }
 	    }
 
 	    if not r then
-	        ngx.log(ngx.ERR,"##resolverdomain module##,failed to instantiate the resolver,error: "..err)
+	        ngx.log(ngx.ERR,"##easyresolver module##,failed to instantiate the resolver,error: "..err)
 	        return nil
 	    end
 
 	    local answers, err = r:query(domain)
 	    if not answers then
-	        ngx.log(ngx.ERR,"##resolverdomain module##,failed to query the DNS server,error: "..err)
+	        ngx.log(ngx.ERR,"##easyresolver module##,failed to query the DNS server,error: "..err)
 	        return nil
 	    end
 
 	    if answers.errcode then
-	    	ngx.log(ngx.ERR,"##resolverdomain module##,server returned error code: "..answers.errcode.." , "..answers.errstr)
+	    	ngx.log(ngx.ERR,"##easyresolver module##,server returned error code: "..answers.errcode.." , "..answers.errstr)
 	    	return nil
 	    end
 

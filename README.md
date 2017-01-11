@@ -22,7 +22,6 @@ local ip_list = easyresolver.getDomainIpList("www.google.com")
 ngx.say(ip_list)
 ``` 
 ---
----
 
 **easyresolver** 是一个DNS解析器,基于resty.dns.resolver和resty.lrucache两个OpenResty的默认模块实现。你可以使用easyresolver很方便的解析域名获取这个域名的ip地址,域名解析的结果默认缓存10分钟，缓存使用LRUCache。easyresolver目前只支持类unix的系统，如：linux 、mac OS。
 
