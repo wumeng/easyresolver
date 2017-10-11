@@ -51,7 +51,7 @@ local _M = { _VERSION = '0.01' }
 	function _M.getDomainIpList(domain)
 
 		local list = ip_cache:get(ip_list_cache_key)
-		if list ~= nil and list ~= "" then
+		if list ~= nil and list ~= "" and #list ~= 0 then
 	        ngx.log(ngx.ALERT,"##easyresolver module##,get ip_list from cache")
 			return list
 		end	
